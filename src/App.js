@@ -29,8 +29,6 @@ function Header(props) {
 
 function Results(props) {
   let album = props.album;
-  let artist = props.artist;
-  let songname = props.songname;
   let message = props.message;
   let valence = props.valence;
   let waiting = props.waiting;
@@ -58,8 +56,6 @@ function Results(props) {
 
   const image = props.image;
   album = shortenText(album);
-  artist = shortenText(artist);
-  songname = shortenText(songname);
 
   if (waiting === true) {
     console.log("waiting:" + waiting);
@@ -76,12 +72,13 @@ function Results(props) {
               src={image}
               width="109"
               height="109"
+              alt="card"
             />
             <div className="card-body">
               <span className="card-text">{album}</span>
               <br />
               <br />
-              <img src={mood} className="card-image-top" />
+              <img src={mood} alt="card" className="card-image-top" />
             </div>
           </div>
         </div>
@@ -95,7 +92,7 @@ function Results(props) {
         <p>{text}</p>
       </div>
       <div className="card">
-        <img src={music} className="card-image-top" />
+        <img src={music} alt="card" className="card-image-top" />
         <div className="card-body">
           <p className="card-title">Discover the mood of your favorite song.</p>
         </div>
