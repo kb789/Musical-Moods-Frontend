@@ -1,38 +1,130 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Sen", sans-serif;
+  min-height: 100vh;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eae6e3;
+}
+
+.container {
+  width: 480px;
+  height: 630px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.4);
+}
+form {
+  width: 90%;
+}
+
+.form-group {
+  height: 65px;
+}
+
+label {
+  position: relative;
+  bottom: 3px;
+}
+
+input {
+  width: 100%;
+  height: 34px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  background: black;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 100%;
+  font-family: sen, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  margin-top: 15px;
+  width: 250px;
+}
+
+.card {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 250px;
+  margin: auto;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+}
+
+.card-body {
+  width: 100%;
+  font-size: 70%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-image-bottom {
+  padding-left: 70.5px;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #333; /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 200px; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .image-container {
+    width: 150px;
+  }
+  .card {
+    width: 150px;
+  }
+  img {
+    max-width: 75px;
+    height: auto;
   }
 }
