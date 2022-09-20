@@ -1,6 +1,3 @@
-## Link to Live website
-
-https://stupefied-wozniak-0cbbd5.netlify.app/
 
 # Getting Started with Create React App
 
