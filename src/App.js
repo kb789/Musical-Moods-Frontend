@@ -128,7 +128,7 @@ class MusicApp extends React.Component {
       this.setState({ waiting: true });
 
       const data = { songname: this.state.songname, artist: this.state.artist };
-      fetch("https://musical-moods-28.herokuapp.com/searchSong", {
+      fetch("https://music-moods.onrender.com/searchSong", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
