@@ -161,12 +161,12 @@ class MusicApp extends React.Component {
         <form onSubmit={this.mySubmitHandler}>
           <div className="form-group">
             <label for="songname">Song title:</label>
-            <input type="text" onChange={this.myChangeHandler} />
+            <input type="text" onChange={this.myChangeHandler} required/>
           </div>
 
           <div class="form-group">
             <label for="artist">Artist name:</label>
-            <input type="text" onChange={this.myChangeHandler2} />
+            <input type="text" onChange={this.myChangeHandler2} required/>
           </div>
 
           <button type="submit">search</button>
